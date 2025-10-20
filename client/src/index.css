@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4F2D7F;
+  --secondary-color: #6A3CB5;
+  --light-purple: #F5F0FF;
+  --background-color: #FFFFFF;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
+}

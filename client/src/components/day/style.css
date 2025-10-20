@@ -1,0 +1,111 @@
+/* Day timeline section styles */
+.day-section {
+  width: 92%;
+  max-width: 1100px;
+  margin: 12px auto 24px auto;
+}
+
+.day-card {
+  display: grid;
+  grid-template-columns: 68px 132px 26px 1fr;
+  align-items: start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #E7E2F7;
+}
+
+.day-strip {
+  width: 56px;
+  height: 128px;
+  background: #4F2D7F;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.day-strip .label {
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transform: rotate(-90deg);
+}
+
+.day-image {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0e7ff, #f5f3ff);
+  box-shadow: 0 6px 14px rgba(79,45,127,0.18);
+}
+
+.timeline {
+  position: relative;
+  width: 26px;
+  height: 132px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #4F2D7F;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #4F2D7F;
+  box-shadow: 0 0 0 3px rgba(79,45,127,0.1);
+  transform: translate(-50%, -50%);
+}
+
+.day-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+.date-title .date {
+  font-weight: 800;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+.date-title .subtitle {
+  font-weight: 600;
+  font-size: 12px;
+  color: #64607D;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.slot-title {
+  font-weight: 700;
+  font-size: 12px;
+  color: #4F2D7F;
+  margin-bottom: 6px;
+}
+.slot-text {
+  font-size: 12px;
+  color: #2E2E2E;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .day-card { grid-template-columns: 56px 100px 22px 1fr; }
+  .day-image { width: 100px; height: 100px; }
+}
+@media (max-width: 700px) {
+  .day-card { grid-template-columns: 56px 0px 22px 1fr; }
+  .day-image { display: none; }
+  .slots { grid-template-columns: 1fr; }
+}
